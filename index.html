@@ -3,87 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inicio | Mapa de navegación</title>
+  <title>GamerZone - Tienda de Juegos</title>
   <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
   <main class="site">
     <header class="hero">
-      <p class="eyebrow">Navegación web en HTML puro</p>
-      <h1>Inicio</h1>
+      <p class="eyebrow">Tu próxima aventura comienza aquí</p>
+      <h1>GamerZone</h1>
       <p class="lead">
-        Este ejemplo separa el estilo en un archivo externo y divide el contenido por secciones
-        para mostrar una navegación clara y mantenible.
+        Explora los mejores títulos para PlayStation, Xbox y Nintendo. Filtra por tu plataforma 
+        favorita y encuentra ofertas exclusivas.
       </p>
     </header>
 
-    <section class="layout" aria-label="Estructura del sitio">
+    <section class="layout" aria-label="Estructura de la tienda">
       <nav class="panel tree-panel" aria-label="Árbol de navegación">
-        <h2>Mapa de páginas</h2>
+        <h2>Catálogo de Consolas</h2>
         <ul class="tree">
           <li>
             <span class="node node-root">Inicio</span>
             <ul>
               <li>
-                <a class="node" href="pages/productos.html">Productos</a>
+                <a class="node node-playstation" href="pages/PlayStation/PlayStation.html">PlayStation</a>
                 <ul>
-                  <li><a class="node" href="pages/productos.html#categorias">Categorías</a></li>
-                  <li><a class="node" href="pages/productos.html#detalle-producto">Detalle de Producto</a></li>
+                  <li><a class="node" href="pages/PlayStation/juegosps5.html">Juegos PS5</a></li>
+                  <li><a class="node" href="pages/PlayStation/Accesorios.html">Accesorios</a></li>
                 </ul>
               </li>
               <li>
-                <a class="node" href="pages/carrito.html">Carrito</a>
+                <a class="node node-xbox" href="pages/Xbox/Xbox.html">Xbox</a>
                 <ul>
-                  <li><a class="node" href="pages/carrito.html#resumen">Resumen</a></li>
-                  <li><a class="node" href="pages/carrito.html#checkout">Checkout</a></li>
+                  <li><a class="node" href="pages/Xbox/Game Pass.html">Game Pass</a></li>
+                  <li><a class="node" href="pages/Xbox/Juegos Series X.html">Juegos Series X/S</a></li>
                 </ul>
               </li>
               <li>
-                <a class="node" href="pages/perfil.html">Perfil de Usuario</a>
+                <a class="node node-nintendo" href="pages/Nintendo/Nintendo.html">Nintendo</a>
                 <ul>
-                  <li><a class="node" href="pages/perfil.html#mis-pedidos">Mis pedidos</a></li>
-                  <li><a class="node" href="pages/perfil.html#configuracion">Configuración</a></li>
+                  <li><a class="node" href="pages/Nintendo/Juegos Switch.html">Juegos Switch</a></li>
+                  <li><a class="node" href="pages/Nintendo/Exclusivos.html">Exclusivos</a></li>
                 </ul>
               </li>
               <li>
-                <a class="node" href="pages/soporte.html">Soporte</a>
-                <ul>
-                  <li><a class="node" href="pages/soporte.html#faq">FAQ</a></li>
-                  <li><a class="node" href="pages/soporte.html#contacto">Contacto</a></li>
-                </ul>
+                <a class="node" href="pages/Mi carrito/Mi Carrito.html">Mi Carrito</a>
               </li>
             </ul>
           </li>
         </ul>
       </nav>
 
-      <section class="panel content-panel" aria-label="Resumen de secciones">
+      <section class="panel content-panel" aria-label="Secciones principales">
         <div class="section-head">
-          <h2>Secciones principales</h2>
-          <p>Desde aquí se accede a cada rama del árbol de navegación.</p>
+          <h2>Elige tu plataforma</h2>
+          <p>Selecciona una categoría para ver los juegos disponibles.</p>
         </div>
 
         <div class="summary-grid">
-          <a class="tile" href="pages/productos.html">
-            <h3>Productos</h3>
-            <p>Categorías y detalle de producto.</p>
+          <a class="tile tile-playstation" href="pages/PlayStation/PlayStation.html">
+            <h3>PlayStation</h3>
+            <p>Siente el poder de los exclusivos de Sony, mandos DualSense y más.</p>
           </a>
-          <a class="tile" href="pages/carrito.html">
-            <h3>Carrito</h3>
-            <p>Resumen y checkout.</p>
+          
+          <a class="tile tile-xbox" href="pages/Xbox/Xbox.html">
+            <h3>Xbox</h3>
+            <p>Disfruta de la potencia de Microsoft y el catálogo de Xbox Game Pass.</p>
           </a>
-          <a class="tile" href="pages/perfil.html">
-            <h3>Perfil de Usuario</h3>
-            <p>Mis pedidos y configuración.</p>
+          
+          <a class="tile tile-nintendo" href="pages/Nintendo/Nintendo.html">
+            <h3>Nintendo</h3>
+            <p>Diversión donde quieras con los mejores títulos de Mario, Zelda y Pokémon.</p>
           </a>
-          <a class="tile" href="pages/soporte.html">
-            <h3>Soporte</h3>
-            <p>FAQ y contacto.</p>
+
+          <a class="tile tile-profile" href="pages/Perfil/perfil.html">
+            <h3>Mi Perfil</h3>
+            <p>Historial de pedidos, nivel de cuenta, trofeos y configuraciones.</p>
           </a>
         </div>
 
         <div class="note">
-          La estructura conserva la jerarquía pedida, pero cada bloque funcional vive en su propio archivo HTML.
+          Tip gamer: Cada sección te llevará a los lanzamientos específicos y stock disponible de cada consola.
         </div>
       </section>
     </section>

@@ -1,14 +1,32 @@
 :root {
   color-scheme: light;
-  --bg: #f5f7fb;
+  --bg: #2352af;
   --surface: #ffffff;
-  --surface-2: #eef3ff;
-  --text: #182235;
-  --muted: #5c6b82;
-  --line: #c9d3e5;
-  --accent: #275efe;
-  --accent-soft: rgba(39, 94, 254, 0.12);
-  --shadow: 0 14px 30px rgba(18, 31, 53, 0.08);
+  --surface-2: #f0f3f9;
+  --text: #0f172a;
+  --muted: #64748b;
+  --line: #e2e8f0;
+  --shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
+
+  /* Colores Base de la Tienda (Gamer Neutro) */
+  --accent: #6366f1; 
+  --accent-soft: rgba(99, 102, 241, 0.1);
+
+  /* Colores de Identidad de Marca */
+  --brand-playstation: #00439c;
+  --brand-playstation-soft: rgba(0, 67, 156, 0.08);
+  
+  --brand-xbox: #107c10;
+  --brand-xbox-soft: rgba(16, 124, 16, 0.08);
+  
+  --brand-nintendo: #e60012;
+  --brand-nintendo-soft: rgba(230, 0, 18, 0.08);
+  
+  --brand-offers: #f59e0b; 
+  --brand-offers-soft: rgba(245, 158, 11, 0.08);
+
+  --brand-profile: #8b5cf6; 
+  --brand-profile-soft: rgba(139, 92, 246, 0.08);
 }
 
 * {
@@ -37,83 +55,94 @@ a {
   padding: 40px 20px 56px;
 }
 
+/* --- HERO & HEADER --- */
 .hero {
-  margin-bottom: 28px;
+  margin-bottom: 32px;
 }
 
 .eyebrow {
   display: inline-block;
   margin: 0 0 12px;
-  padding: 6px 12px;
+  padding: 6px 14px;
   border: 1px solid var(--line);
   border-radius: 999px;
   background: var(--surface);
-  color: var(--muted);
-  font-size: 0.9rem;
+  color: var(--accent);
+  font-size: 0.85rem;
   font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 h1 {
   margin: 0 0 10px;
-  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
   line-height: 1.1;
+  font-weight: 800;
+  background: linear-gradient(90deg, var(--text) 30%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .lead {
   max-width: 72ch;
   margin: 0;
   color: var(--muted);
-  font-size: 1.05rem;
+  font-size: 1.1rem;
 }
 
+/* --- LAYOUT PRINCIPAL --- */
 .layout,
 .page-shell {
   display: grid;
-  grid-template-columns: 340px minmax(0, 1fr);
-  gap: 24px;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 28px;
   align-items: start;
 }
 
 .panel {
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 14px;
+  border-radius: 16px;
   box-shadow: var(--shadow);
+  overflow: hidden;
 }
 
 .tree-panel,
 .content-panel,
 .sidebar-panel,
 .page-content {
-  padding: 20px;
+  padding: 24px;
 }
 
 .panel h2,
 .page-content h1 {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
+  font-weight: 700;
 }
 
 .section-head {
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
 .section-head p {
-  margin: 8px 0 0;
+  margin: 6px 0 0;
   color: var(--muted);
 }
 
+/* --- INTERFAZ DE ÁRBOL (NAVEGACIÓN) --- */
 .tree {
   list-style: none;
-  margin: 16px 0 0;
+  margin: 20px 0 0;
   padding-left: 0;
 }
 
 .tree ul {
   list-style: none;
-  margin: 10px 0 0;
-  padding-left: 18px;
-  border-left: 1px solid var(--line);
+  margin: 8px 0 0;
+  padding-left: 16px;
+  border-left: 2px solid var(--line);
 }
 
 .tree > li > ul {
@@ -122,85 +151,129 @@ h1 {
 
 .tree li {
   position: relative;
-  margin: 10px 0;
-  padding-left: 18px;
+  margin: 8px 0;
+  padding-left: 16px;
 }
 
 .tree li::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 0.95em;
-  width: 14px;
-  height: 1px;
+  top: 1.05em;
+  width: 12px;
+  height: 2px;
   background: var(--line);
 }
 
 .node {
   display: block;
-  padding: 10px 12px;
-  border-radius: 12px;
+  padding: 10px 14px;
+  border-radius: 10px;
   background: var(--surface-2);
   color: var(--text);
   text-decoration: none;
   font-weight: 600;
-  transition: background 0.18s ease, transform 0.18s ease, border-color 0.18s ease;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
 }
 
 .node:hover,
-.node:focus-visible,
-.tile:hover,
-.tile:focus-visible,
-.back-link:hover,
-.back-link:focus-visible {
+.node:focus-visible {
   background: var(--accent-soft);
-  transform: translateX(2px);
+  color: var(--accent);
+  transform: translateX(4px);
   outline: none;
 }
 
 .node-root {
-  border: 1px solid #d7e0fb;
-  background: linear-gradient(180deg, #ffffff 0%, #f1f5ff 100%);
+  border: 1px solid #e2e8f0;
+  background: linear-gradient(180deg, #ffffff 0%, var(--surface-2) 100%);
 }
 
+.node-playstation:hover { background: var(--brand-playstation-soft); color: var(--brand-playstation); }
+.node-xbox:hover { background: var(--brand-xbox-soft); color: var(--brand-xbox); }
+.node-nintendo:hover { background: var(--brand-nintendo-soft); color: var(--brand-nintendo); }
+
+/* --- REJILLA Y TARJETAS (TILES) --- */
 .summary-grid,
 .branch-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
 }
 
 .tile,
 .card {
   display: block;
-  padding: 18px;
+  padding: 24px;
   border: 1px solid var(--line);
-  border-radius: 12px;
-  background: #fbfcff;
+  border-radius: 14px;
+  background: var(--surface);
   text-decoration: none;
-  transition: background 0.18s ease, transform 0.18s ease, border-color 0.18s ease;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .tile h3,
 .card h3 {
   margin: 0 0 8px;
-  font-size: 1rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  transition: color 0.2s ease;
 }
 
 .tile p,
 .card p,
-.page-content p,
-.note {
+.page-content p {
   margin: 0;
   color: var(--muted);
+  font-size: 0.95rem;
 }
 
+/* --- EFECTOS HOVER UNIFORMES --- */
+.tile-playstation:hover {
+  border-color: var(--brand-playstation);
+  background: var(--brand-playstation-soft);
+  transform: translateY(-4px);
+}
+.tile-playstation:hover h3 { color: var(--brand-playstation); }
+
+.tile-xbox:hover {
+  border-color: var(--brand-xbox);
+  background: var(--brand-xbox-soft);
+  transform: translateY(-4px);
+}
+.tile-xbox:hover h3 { color: var(--brand-xbox); }
+
+.tile-nintendo:hover {
+  border-color: var(--brand-nintendo);
+  background: var(--brand-nintendo-soft);
+  transform: translateY(-4px);
+}
+.tile-nintendo:hover h3 { color: var(--brand-nintendo); }
+
+.tile-offers:hover {
+  border-color: var(--brand-offers);
+  background: var(--brand-offers-soft);
+  transform: translateY(-4px);
+}
+.tile-offers:hover h3 { color: var(--brand-offers); }
+
+.tile-profile:hover {
+  border-color: var(--brand-profile);
+  background: var(--brand-profile-soft);
+  transform: translateY(-4px);
+}
+.tile-profile:hover h3 { color: var(--brand-profile); }
+
+/* --- COMPONENTES ADICIONALES --- */
 .note {
-  margin-top: 16px;
-  padding: 14px 16px;
+  margin: 24px 0 0;
+  padding: 16px;
   border-left: 4px solid var(--accent);
-  background: #f7f9ff;
-  border-radius: 0 12px 12px 0;
+  background: var(--accent-soft);
+  color: var(--text);
+  font-weight: 500;
+  border-radius: 4px 12px 12px 4px;
 }
 
 .breadcrumb {
@@ -212,11 +285,17 @@ h1 {
 .back-link {
   display: inline-flex;
   margin-top: 18px;
-  padding: 10px 12px;
-  border-radius: 12px;
+  padding: 10px 16px;
+  border-radius: 10px;
   background: var(--surface-2);
   text-decoration: none;
   font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.back-link:hover {
+  background: var(--accent-soft);
+  color: var(--accent);
 }
 
 .page-content {
@@ -224,23 +303,21 @@ h1 {
   gap: 16px;
 }
 
-.page-content h2 {
-  margin: 0;
-  font-size: 1.7rem;
-}
-
-.branch-grid {
-  margin-top: 4px;
-}
-
+/* --- DESIGN RESPONSIVO --- */
 @media (max-width: 900px) {
   .layout,
   .page-shell {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
 
   .summary-grid,
   .branch-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .site {
+    padding: 24px 16px;
   }
 }

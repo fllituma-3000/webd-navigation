@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Carrito - GamerZone</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #2352af;
+      --surface: #ffffff;
+      --surface-2: #f0f3f9;
+      --text: #0f172a;
+      --muted: #64748b;
+      --line: #e2e8f0;
+      --shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
+      --accent: #6366f1; /* Índigo Base */
+      --accent-soft: rgba(99, 102, 241, 0.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    .site { max-width: 1120px; margin: 0 auto; padding: 40px 20px 56px; }
+    .page-shell { display: grid; grid-template-columns: 1fr; gap: 28px; }
+    .panel { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow); overflow: hidden; }
+    .page-content { padding: 32px; display: grid; gap: 24px; }
+    .breadcrumb { color: var(--muted); font-size: 0.92rem; }
+    h1 { margin: 0; font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; color: var(--text); }
+    h3 { margin: 0 0 8px; font-size: 1.15rem; font-weight: 700; color: var(--accent); }
+    p { margin: 0; color: var(--muted); font-size: 1rem; }
+    .branch-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+    .card { padding: 32px; border: 1px dashed var(--line); border-radius: 14px; background: #fbfbfe; text-align: center; }
+    .back-link { display: inline-flex; margin-top: 12px; padding: 12px 20px; border-radius: 10px; background: var(--surface-2); text-decoration: none; font-weight: 600; color: var(--text); transition: all 0.2s ease; width: fit-content; }
+    .back-link:hover { background: var(--accent-soft); color: var(--accent); transform: translateX(-4px); }
+  </style>
+</head>
+<body>
+  <main class="site">
+    <div class="page-shell">
+      <article class="panel page-content">
+        <div class="breadcrumb">Inicio / Carrito</div>
+        <h1>Mi Carrito de Compras</h1>
+        <p>Aquí verás los artículos listos para comenzar tu próxima partida.</p>
+
+        <div class="branch-grid">
+          <div class="card">
+            <h3>🛒 El carrito está vacío</h3>
+            <p>Aún no has añadido ningún juego o accesorio a tu pedido. ¡Explora las secciones de las consolas para empezar!</p>
+          </div>
+        </div>
+
+        <div>
+          <a href="../../index.html" class="back-link">← Volver al Catálogo</a>
+        </div>
+      </article>
+    </div>
+  </main>
+</body>
+</html>
