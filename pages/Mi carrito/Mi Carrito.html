@@ -19,12 +19,16 @@
     }
     * { box-sizing: border-box; }
     body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
-      color: var(--text);
-      line-height: 1.5;
-    }
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  /* 1. Cambiamos a min-height para que cubra TODA la pantalla como mínimo */
+  min-height: 100vh; 
+  /* 2. Evitamos que el gradiente se repita en bucle hacia abajo */
+  background-attachment: fixed; 
+  background: linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
+  color: var(--text);
+  line-height: 1.5;
+}
     .site { max-width: 1120px; margin: 0 auto; padding: 40px 20px 56px; }
     .page-shell { display: grid; grid-template-columns: 1fr; gap: 28px; }
     .panel { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow); overflow: hidden; }
