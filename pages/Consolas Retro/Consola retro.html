@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consolas Retro - GamerZone</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #2352af;
+      --surface: #ffffff;
+      --surface-2: #f0f3f9;
+      --text: #1a202c;
+      --muted: #718096;
+      --line: #e2e8f0;
+      --shadow: 0 10px 25px rgba(26, 32, 44, 0.05);
+      --accent: #2d3748; /* Gris Carbón Retro */
+      --accent-soft: rgba(45, 55, 72, 0.08);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      min-height: 100vh;
+      background-attachment: fixed;
+      background: linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    .site { max-width: 1120px; margin: 0 auto; padding: 40px 20px 56px; }
+    .page-shell { display: grid; grid-template-columns: 1fr; gap: 28px; }
+    .panel { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow); overflow: hidden; }
+    .page-content { padding: 32px; display: grid; gap: 24px; }
+    .breadcrumb { color: var(--muted); font-size: 0.92rem; }
+    h1 { margin: 0; font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; color: var(--accent); }
+    h2 { margin: 0 0 12px; font-size: 1.5rem; font-weight: 700; border-bottom: 2px solid var(--accent-soft); padding-bottom: 6px; }
+    h3 { margin: 0 0 8px; font-size: 1.15rem; font-weight: 700; }
+    p { margin: 0; color: var(--muted); font-size: 1rem; }
+    section { margin-top: 12px; }
+    section > p { margin-bottom: 16px; }
+    .branch-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+    .card { padding: 24px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); transition: all 0.25s ease; display: flex; flex-direction: column; gap: 16px; text-decoration: none; color: var(--text); }
+    .card:hover { border-color: var(--accent); background: var(--accent-soft); transform: translateY(-4px); }
+    .product-img-wrapper { width: 100%; height: 180px; background: var(--surface-2); border-radius: 10px; overflow: hidden; display: flex; align-items: center; justify-content: center; padding: 8px; }
+    .product-img { width: 100%; height: 100%; object-fit: cover; }
+    .back-link { display: inline-flex; margin-top: 12px; padding: 12px 20px; border-radius: 10px; background: var(--surface-2); text-decoration: none; font-weight: 600; color: var(--text); transition: all 0.2s ease; width: fit-content; }
+    .back-link:hover { background: var(--accent-soft); color: var(--accent); transform: translateX(-4px); }
+    @media (max-width: 768px) { .branch-grid { grid-template-columns: 1fr; } .page-content { padding: 20px; } }
+  </style>
+</head>
+<body>
+  <main class="site">
+    <div class="page-shell">
+      <article class="panel page-content">
+        <div class="breadcrumb">Inicio / Consolas Retro</div>
+        <h1>Consolas Retro</h1>
+        <p>Revive los mejores momentos de la historia de los videojuegos con nuestra selección clásica.</p>
+
+        <section id="categorias-retro">
+          <h2>Explorar por Sistema</h2>
+          <p>Selecciona una consola clásica para ver sus títulos y ediciones especiales.</p>
+          <div class="branch-grid">
+            <a href="Play 2.html" class="card">
+              <div class="product-img-wrapper">
+                <img src="../../Images/play2.webp" alt="PlayStation 2" class="product-img">
+              </div>
+              <div>
+                <h3>PlayStation 2</h3>
+                <p>Explora el catálogo de la consola más vendida de todos los tiempos.</p>
+              </div>
+            </a>
+            <a href="xbox-clasica.html" class="card">
+              <div class="product-img-wrapper">
+                <img src="../../Images/xbox-clasica.jpg" alt="Xbox Clásica" class="product-img">
+              </div>
+              <div>
+                <h3>Xbox Clásica</h3>
+                <p>El nacimiento de una leyenda verde y la llegada de Halo.</p>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <div>
+          <a href="../../index.html" class="back-link">← Volver al Catálogo</a>
+        </div>
+      </article>
+    </div>
+  </main>
+</body>
+</html>

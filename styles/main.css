@@ -323,3 +323,37 @@ h1 {
     padding: 24px 16px;
   }
 }
+/* --- NUEVAS MARCAS --- */
+:root {
+  --brand-retro: #d97706; 
+  --brand-retro-soft: rgba(217, 119, 6, 0.08);
+
+  --brand-pc: #0ea5e9; 
+  --brand-pc-soft: rgba(14, 165, 233, 0.08);
+}
+
+/* --- HOVER EN ÁRBOL --- */
+.node-retro:hover { 
+  background: var(--brand-retro-soft); 
+  color: var(--brand-retro); 
+}
+
+.node-pc:hover { 
+  background: var(--brand-pc-soft); 
+  color: var(--brand-pc); 
+}
+
+/* --- HOVER EN TILES --- */
+.tile-retro:hover {
+  border-color: var(--brand-retro);
+  background: var(--brand-retro-soft);
+  transform: translateY(-4px);
+}
+.tile-retro:hover h3 { color: var(--brand-retro); }
+
+.tile-pc:hover {
+  border-color: var(--brand-pc);
+  background: var(--brand-pc-soft);
+  transform: translateY(-4px);
+}
+.tile-pc:hover h3 { color: var(--brand-pc); }
